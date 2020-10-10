@@ -3,6 +3,12 @@
 
 # Flash Chat ⚡️
 
+## Android build status
+[![Build status](https://build.appcenter.ms/v0.1/apps/82f7843d-2957-4c89-a3cd-112197815b48/branches/stable/badge)](https://appcenter.ms)
+
+## iOS build status
+[![Build status](https://build.appcenter.ms/v0.1/apps/43dd481f-451a-4d1e-b764-c70c6fcfd980/branches/stable/badge)](https://appcenter.ms)
+
 ## Our Goal
 
 The objective of this tutorial is to learn how to incorporate Firebase into our Flutter apps. We'll be using Firebase Cloud Firestore as well as the Firebase authentication package to equip our app with a cloud-based NoSQL database and secure authentication methods. 
