@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flash_chat/mixins/background_animation_mixin.dart';
 import 'package:flutter/material.dart';
 
 import '../components/rounded_button.dart';
@@ -13,32 +14,17 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen>
-    with SingleTickerProviderStateMixin {
-  AnimationController controller;
-  Animation<Color> backgroundAnimation;
-
+    with SingleTickerProviderStateMixin, BackgroundAnimationMixin {
   @override
   void initState() {
     super.initState();
-
-    controller =
-        AnimationController(duration: Duration(seconds: 1), vsync: this);
-    backgroundAnimation = ColorTween(
-      begin: Colors.blueGrey,
-      end: Colors.white,
-    ).animate(controller);
-
-    controller.addListener(() {
-      setState(() {});
-    });
-
-    controller.forward();
+    backgroundAnimationInit();
   }
 
   @override
   void dispose() {
     super.dispose();
-    controller.dispose();
+    backgroundAnimationDispose();
   }
 
   @override
